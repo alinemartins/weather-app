@@ -1,0 +1,16 @@
+body {
+    background-color: #3f7fa1;
+}
+
+h1 {
+    color: white;
+    font-size: 4em;
+}
+
+.card-title {
+    font-size: 3em;
+}
+
+.card-text {
+    font-size: 2em;
+}
