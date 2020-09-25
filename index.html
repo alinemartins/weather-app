@@ -17,24 +17,18 @@
 <body>
     <section class="py-5">
         <div class="container">
-            <h1 class="mb-5">How is the weather?</h1>
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="row flex-row flex-md-column justify-content-between mt-4 mt-md-0">
-                        <div class="col-6 col-md-12 my-md-4">
-                            <form action="">
-                                <input type="text" id="cityName" placeholder="Search for a city"></input>
-                                <button id="getWeather" type="button" class="btn btn-info">GO</button>
-                            </form>
-                        </div>
-                        <div class="col-6 col-md-12">
-                            <div id="cityData">
-                            </div>
-                        </div>
+            <h1 class="mb-2">How is the weather?</h1>
+            <form id="form" class="mb-5">
+                <input type="text" id="cityName" placeholder="Search for a city"></input>
+                <button id="getWeather" type="button" class="btn btn-info">GO</button>
+            </form>
+            <div class="row d-flex justify-content-around">
+                <div class="col">
+                    <div id="cityData">
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <img class="img-fluid" src="img/weather.png"alt="">
+                <div class="col">
+                    <img src="img/weather.png" alt="">
                 </div>
             </div>
         </div>

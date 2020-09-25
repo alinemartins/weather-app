@@ -14,3 +14,15 @@ h1 {
 .card-text {
     font-size: 2em;
 }
+
+.smaller {
+    font-size: small;
+}
+
+img {
+    max-width: 400px;
+}
+
+.card {
+    width: 400px;
+}

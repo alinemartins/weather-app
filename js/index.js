@@ -1,5 +1,8 @@
 const apiKey = '34549a83f1e820ec361f5dd5a305b288';
+
 document.getElementById('getWeather').addEventListener('click', getWeatherData);
+
+
 
 
 function getWeatherData() {
@@ -13,6 +16,7 @@ function getWeatherData() {
         .then(function (data) {
             const weatherData = {
                 cityName: data.name,
+                country: data.sys.country,
                 description: data.weather[0].description,
                 feelsLike: data.main.feels_like,
                 temp: data.main.temp,
@@ -23,7 +27,7 @@ function getWeatherData() {
             document.getElementById('cityData').innerHTML = `
             <div class="card">
                 <div class="card-body border border-info">
-                    <h5 class="card-title">${weatherData.cityName}</h5>
+                    <h5 class="card-title">${weatherData.cityName} <sup class="smaller">${weatherData.country}</sup></h5>
                     <h6 class="card-subtitle mb-2 text-muted">${weatherData.temp}<sup>°C</sup>, feels like ${weatherData.feelsLike}<sup>°C</sup></h6><br>
                     <p class="card-text">${weatherData.description}</p>
                     <p>Min ${weatherData.tempMin}<sup>°C</sup> | Max ${weatherData.tempMax}<sup>°C</sup></p>
@@ -34,5 +38,7 @@ function getWeatherData() {
         .catch(function (error) {
             console.log(error);
         });
-
+    
+    document.getElementById('form').reset();
+    
 }
