@@ -4,7 +4,6 @@ document.getElementById('getWeather').addEventListener('click', getWeatherData);
 
 
 
-
 function getWeatherData() {
     let cityName = document.getElementById('cityName').value;
     const endpoint = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
@@ -39,6 +38,7 @@ function getWeatherData() {
         })
         .catch(function (error) {
             console.log(error);
+            alert('Please enter a valid city.');
         });
     
     
