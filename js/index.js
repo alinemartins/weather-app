@@ -13,7 +13,7 @@ function getWeatherData() {
         .then(function (data) {
             const weatherData = {
                 cityName: data.name,
-                weatherDescription: data.weather[0].description,
+                description: data.weather[0].description,
                 feelsLike: data.main.feels_like,
                 temp: data.main.temp,
                 tempMax: data.main.temp_max,
@@ -25,7 +25,7 @@ function getWeatherData() {
                 <div class="card-body border border-info">
                     <h5 class="card-title">${weatherData.cityName}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${weatherData.temp}<sup>°C</sup>, feels like ${weatherData.feelsLike}<sup>°C</sup></h6><br>
-                    <p class="card-text">${weatherData.weatherDescription}</p>
+                    <p class="card-text">${weatherData.description}</p>
                     <p>Min ${weatherData.tempMin}<sup>°C</sup> | Max ${weatherData.tempMax}<sup>°C</sup></p>
                 </div>
             </div>`
